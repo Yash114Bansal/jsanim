@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("../images/bg.jpg");
+    border: 5px solid ;
+    border-color: black;
+}
+
+
+.music-logo{
+    position: absolute;
+    z-index: -1;
+}
+.music{
+    height:100px;
+    width: 100px;
+    
+
+}
+canvas {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 5px solid black;
+  }
