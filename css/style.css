@@ -17,6 +17,7 @@ body {
     background: url("../images/bg.jpg");
     border: 5px solid;
     border-color: black;
+
 }
 
 
@@ -94,41 +95,58 @@ canvas {
     align-items: center;
     color: white;
 }
+.piano{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 2%;
+
+}
 
 .white-keys {
     display: flex;
-    height: 800px;
-    width: 80rem;
-    position: relative; 
+    height: 90%;
+    width: 70%;
     z-index: 1; 
 }
 
 .white-keys div {
     height: 100%;
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
+    background: linear-gradient(to bottom, transparent 0%, transparent 60%, white 30%, white 100%);
     border: 1px solid black;
     z-index: 1;
+    border-radius: 4px;
 }
 .black-keys {
     display: flex;
-    height: 800px;
-    width: 80rem;
+    /* height: 600px;
+    width: 80rem; */
+    height: 70%;
+    width: 65%;
     position: absolute; 
     z-index: 2; 
 }
 
-.black-keys div {
+.black-keys > .note {
     height: 100%;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
+    border-radius: 4px;
+    background: linear-gradient(to bottom, transparent 0%, transparent 70%, black 30%, black 100%);
+    margin: 1px;
     z-index: 2;
 }
-
+.notespace{
+    width: 100%;
+}
 .box {
     position: absolute;
-    height: 20px;
-    width: 100px;
+    height: 80%;
+
     background: red;
     z-index: 3; 
 }
