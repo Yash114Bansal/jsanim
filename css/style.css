@@ -4,32 +4,131 @@
     margin-top: 0;
     box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
+    /* overflow: hidden; */
 }
 
-body{
+body {
     background: url("../images/bg.jpg");
-    border: 5px solid ;
+    border: 5px solid;
     border-color: black;
 }
 
 
-.music-logo{
+.music-logo {
     position: absolute;
     z-index: -1;
 }
-.music{
-    height:100px;
+
+.music {
+    height: 100px;
     width: 100px;
-    
+
 
 }
+
 canvas {
     display: block;
     height: 100%;
     width: 100%;
     border: 5px solid black;
-  }
+}
+/* #overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.white-keys{
+    display: flex;
+    height: 800px;
+    width: 80rem;
+    z-index: 1; 
+}
+.white-keys div{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 20px;
+}
+/* .black-keys{
+    position: relative;
+    width: 80rem;
+    height: 50rem;
+    z-index: 2;
+} */
+/* .black-keys div{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    
+} */
+/* .box{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red;
+    z-index: 3;
+} */ 
+#overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.white-keys {
+    display: flex;
+    height: 800px;
+    width: 80rem;
+    position: relative; 
+    z-index: 1; 
+}
+
+.white-keys div {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 1;
+}
+.black-keys {
+    display: flex;
+    height: 800px;
+    width: 80rem;
+    position: absolute; 
+    z-index: 2; 
+}
+
+.black-keys div {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+}
+
+.box {
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    background: red;
+    z-index: 3; 
+}
