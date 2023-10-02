@@ -3,10 +3,11 @@ const allnotes = document.querySelectorAll(".note");
 // Add mappings to audio Files
 
 allnotes.forEach(key => {
+    const note = new Audio(`./notes/${key.getAttribute('note')}.mp3`);
     key.addEventListener("click", () => {
-        const note = new Audio(`./notes/${key.getAttribute('note')}.mp3`);
         note.play();
     });
+    note.play();
 });
 
 
