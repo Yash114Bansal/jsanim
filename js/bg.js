@@ -9,7 +9,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const image = new Image();
-image.src = "../images/music2.png";
+image.src = "images/music2.png";
 
 const images = [];
 const imageWidth = 105;
