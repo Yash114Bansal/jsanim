@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Monster;
+    src: url("../fonts/Monster.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +46,7 @@ canvas {
     border: 5px solid black;
 }
 
+
 #overlay-content {
     position: absolute;
     top: 0;
@@ -51,6 +57,34 @@ canvas {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    font-size: 100px;
+    font-family: "Monster";
+    margin-bottom: 3%;
+    animation: flicker 1s ease-in-out infinite alternate;
+}
+
+.button {
+    width: 30%;
+    height: 10%;
+    font-family: "Monster";
+    letter-spacing: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .piano {
@@ -113,7 +147,7 @@ canvas {
     height: 34%;
     width: 100%;
     /* background-color: black; */
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 8px 4px;
     /* background: linear-gradient(to bottom, transparent 0%, transparent 70%, black 30%, black 100%); */
     background: black;
     margin: 1px;
@@ -169,10 +203,51 @@ canvas {
     transform: translateY(1200%);
     /* Move the red box to the bottom */
 }
-.btn{
+
+.btn {
     position: absolute;
     z-index: 10;
     top: 15px;
     right: 20px;
+    
+}
+.btn1{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    /* border-radius: px; */
+    color: black;
+    font-family: 'Monster';
+    letter-spacing: 3px;
 }
 
+.dissapear{
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1; 
+    }
+    to {
+        opacity: 0; 
+    }
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.8;
+		text-shadow: 2px 2px 7px white;
+	}
+	100% {
+		opacity: 0.9;
+		text-shadow: 2px 2px 15px white;
+	}
+}

@@ -50,12 +50,6 @@ function animate() {
         img.x += img.dx;
         img.y += img.dy;
 
-        // if (img.x < 0 || img.x + imageWidth > canvas.width) {
-        //     img.dx *= -1;
-        // }
-        // if (img.y < 0 || img.y + imageHeight > canvas.height) {
-        //     img.dy *= -1;
-        // }
         if (img.x < 0) {
             img.dx *= -1;
             body.style.borderLeftColor = getRandomColor();

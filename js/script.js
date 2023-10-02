@@ -100,4 +100,14 @@ function playNotesWithDelay() {
     playNextNote();
 }
 
-document.getElementById("play").addEventListener("click",playNotesWithDelay)
+document.getElementById("play").addEventListener("click", playNotesWithDelay)
+const playy = document.getElementById("playy")
+const learn = document.getElementById("learn")
+const piano =document.querySelector(".piano");
+const home = document.querySelector(".home");
+const btn = document.querySelector(".btn");
+playy.addEventListener("click", function (e) {
+    home.classList.add("dissapear");
+    piano.classList.remove("dissapear");
+    btn.classList.remove("dissapear");
+});
