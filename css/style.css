@@ -143,10 +143,10 @@ canvas {
 .notespace{
     width: 100%;
 }
-.box {
-    position: absolute;
-    height: 80%;
 
-    background: red;
-    z-index: 3; 
+.white-keys div:hover{
+    transform: translateY(5px);
+}
+.black-keys > .note:hover{
+    transform: translateY(3px);
 }
