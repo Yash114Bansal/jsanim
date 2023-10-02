@@ -22,18 +22,6 @@ images.push({
     dy: (Math.random() < 0.5 ? -1 : 1) * 3,
 });
 
-// canvas.addEventListener("click", (e) => {
-//     if (images.length <=5) {
-        
-//         const newImage = {
-//             x: e.clientX - imageWidth / 2,
-//             y: e.clientY - imageHeight / 2,
-//             dx: (Math.random() < 0.5 ? -1 : 1) * 3,
-//             dy: (Math.random() < 0.5 ? -1 : 1) * 3,
-//         };
-//         images.push(newImage);
-//     }
-// });
 
 overl.addEventListener("click", (e) => {
     if (images.length <=5) {
