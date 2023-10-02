@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    
+
 </head>
+
 <body>
     <canvas id="screensaver"></canvas>
 
 
 
-    
+
     <div id="overlay-content">
         <!-- <h1>Yash</h1> -->
         <div class="piano">
             <div class="white-keys">
+                <div class="octave1">
+                    
+                </div>
                 <div class="white-note-area noteC4">
                     <div class="note" note="C4"></div>
                 </div>
@@ -83,82 +88,88 @@
                 <div class="white-note-area noteB6">
                     <div class="note" note="B6"></div>
                 </div>
-    
+
             </div>
 
             <div class="black-keys">
-                <div class="black-note-area Db4">
+                <div class="black-note-area noteDb4">
                     <div class="note" note="Db4"></div>
                 </div>
-                <div class="black-note-area Eb4">
+                <div class="black-note-area noteEb4">
                     <div class="note" note="Eb4"></div>
                 </div>
                 <div class="black-note-area blankspace">
                     <div note="blankspace"></div>
                 </div>
-                <div class="black-note-area Gb4">
+                <div class="black-note-area noteGb4">
                     <div class="note" note="Gb4"></div>
                 </div>
-                <div class="black-note-area Ab4">
+                <div class="black-note-area noteAb4">
                     <div class="note" note="Ab4"></div>
                 </div>
-                <div class="black-note-area Bb4">
+                <div class="black-note-area noteBb4">
                     <div class="note" note="Bb4"></div>
                 </div>
                 <div class="black-note-area blankspace">
                     <div note="blankspace"></div>
                 </div>
 
-                <div class="black-note-area Db5">
+                <div class="black-note-area noteDb5">
                     <div class="note" note="Db5"></div>
                 </div>
-                <div class="black-note-area Eb5">
+                <div class="black-note-area noteEb5">
                     <div class="note" note="Eb5"></div>
                 </div>
                 <div class="black-note-area blankspace">
                     <div note="blankspace"></div>
                 </div>
-                <div class="black-note-area Gb5">
+                <div class="black-note-area noteGb5">
                     <div class="note" note="Gb5"></div>
                 </div>
-                <div class="black-note-area Ab5">
+                <div class="black-note-area noteAb5">
                     <div class="note" note="Ab5"></div>
                 </div>
-                <div class="black-note-area Bb5">
+                <div class="black-note-area noteBb5">
                     <div class="note" note="Bb5"></div>
                 </div>
                 <div class="black-note-area blankspace">
                     <div note="blankspace"></div>
                 </div>
 
-                <div class="black-note-area Db6">
+                <div class="black-note-area noteDb6">
                     <div class="note" note="Db6"></div>
                 </div>
-                <div class="black-note-area Eb6">
+                <div class="black-note-area noteEb6">
                     <div class="note" note="Eb6"></div>
                 </div>
                 <div class="black-note-area blankspace">
                     <div note="blankspace"></div>
                 </div>
-                <div class="black-note-area Gb6">
+                <div class="black-note-area noteGb6">
                     <div class="note" note="Gb6"></div>
                 </div>
-                <div class="black-note-area Ab6">
+                <div class="black-note-area noteAb6">
                     <div class="note" note="Ab6"></div>
                 </div>
-                <div class="black-note-area Bb6">
+                <div class="black-note-area noteBb6">
                     <div class="note" note="Bb6"></div>
                 </div>
-                
+
 
             </div>
 
             <!-- <div class="box"></div> -->
         </div>
     </div>
+    <div class="btn">
 
+        <button id="startRecording">Start Recording</button>
+        <button id="stopRecording" disabled>Stop Recording</button>
+        <button id="play">Play Recording</button>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/bg.js"></script>
 </body>
+
 </html>
