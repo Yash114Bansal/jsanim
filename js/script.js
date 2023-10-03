@@ -21,7 +21,25 @@ const stopButton = document.getElementById('stopRecording');
 
 // Function to handle key press event
 function handleKeyPress(event) {
-    const key = event.target.getAttribute('note');
+    let key;
+
+    if (event.type === 'mousedown') {
+
+        key = event.target.getAttribute('note');
+        if (!key) {
+            return;
+        }
+    }
+    else {
+        const note_press = keyboardToNoteMap[event.key];
+        if (note_press) {
+            key = note_press;
+        }
+        else {
+            return;
+        }
+    }
+    console.log(key);
     const currentTime = Date.now() - startTime;
 
     recording.push({ key, time: currentTime });
@@ -37,6 +55,7 @@ function startRecording() {
     pianoKeys.forEach(key => {
         key.addEventListener('mousedown', handleKeyPress);
     });
+    document.addEventListener('keydown', handleKeyPress);
 
     startButton.disabled = true;
     stopButton.disabled = false;
@@ -75,7 +94,7 @@ function moveBox(note) {
     }, 100);
 }
 // moveRedBox(".noteC6")
-
+const play_button = document.getElementById("play");
 function playNotesWithDelay() {
     let index = 0;
 
@@ -87,23 +106,22 @@ function playNotesWithDelay() {
 
             if (index < recording.length) {
                 const nextNote = recording[index];
-                // debugger;
-                console.log(recording[index]);
                 const delay = nextNote.time - note.time;
-                console.log(delay);
                 setTimeout(playNextNote, delay);
+            } else {
+                play_button.disabled = false;
             }
         }
     }
 
-    // Start playing notes with the first one
+    play_button.disabled = true;
+
     playNextNote();
 }
-
-document.getElementById("play").addEventListener("click", playNotesWithDelay)
+play_button.addEventListener("click", playNotesWithDelay)
 const playy = document.getElementById("playy")
 const learn = document.getElementById("learn")
-const piano =document.querySelector(".piano");
+const piano = document.querySelector(".piano");
 const home = document.querySelector(".home");
 const btn = document.querySelector(".btn");
 playy.addEventListener("click", function (e) {
