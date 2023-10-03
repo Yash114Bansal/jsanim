@@ -27,7 +27,14 @@ const keyboardToNoteMap = {
     'g': 'D6',
     'b': 'E6',
     'h': 'F6',
-    'n': 'G6',
+    'j': 'G6',
+    'k': 'A6',
+    'l': 'B6',
+    'n': 'Db6',
+    'm': 'Eb6',
+    ',': 'Gb6',
+    '.': 'Ab6',
+    '/': 'Bb6',
 };
 
 // Function to handle keydown event
@@ -39,18 +46,20 @@ function playNote(note) {
 }
 
 function handleKey(event) {
-    const keyPressed = event.key;
+    const orignalKey = event.key;
+    const keyPressed = orignalKey.toLowerCase();
+    console.log(keyPressed);
     const musicNote = keyboardToNoteMap[keyPressed];
     if (musicNote) {
         playNote(musicNote);
         const box = document.querySelector(`.note${musicNote} > div`);
         setTimeout(() => {
             box.style.transform = 'translateY(15px)'; // Example transformation: move the box 100 pixels to the right
-        }, 0); 
+        }, 0);
         setTimeout(() => {
             box.style.transform = 'translateY(0px)';
         }, 200);
-    } 
+    }
 }
 
 
