@@ -1,7 +1,5 @@
 const allnotes = document.querySelectorAll(".note");
 
-// Add mappings to audio Files
-
 allnotes.forEach(key => {
     key.addEventListener("click", () => {
         // const note = new Audio(`./notes/${key.getAttribute('note')}.mp3`);
@@ -73,9 +71,6 @@ function stopRecording() {
 
     startButton.disabled = false;
     stopButton.disabled = true;
-
-    // Print the recorded data to the console
-    console.log("Recording Data:", recording);
 }
 
 // Add click event listeners to the buttons
@@ -91,10 +86,10 @@ function moveBox(note) {
     const redBox = document.createElement('div');
     redBox.innerHTML = note;
     redBox.className = 'red-box';
-    Note.appendChild(redBox); // Append to the first white-note-area
+    Note.appendChild(redBox); 
 
     setTimeout(() => {
-        redBox.classList.add('active'); // Trigger the animation
+        redBox.classList.add('active');
     }, 100);
 }
 // moveRedBox(".noteC6")
@@ -149,6 +144,5 @@ document.getElementById("contact").addEventListener("click", function(){
 //     }
 // }
 
-// // Call the function on page load and when the window is resized
 // window.addEventListener('load', removeElementsOnSmallScreen);
 // window.addEventListener('resize', removeElementsOnSmallScreen);
