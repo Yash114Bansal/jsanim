@@ -96,6 +96,8 @@ function moveBox(note) {
 // moveRedBox(".noteC6")
 const play_button = document.getElementById("play");
 function playNotesWithDelay() {
+    // Firstly Stop Recording
+    stopRecording();
     let index = 0;
 
     function playNextNote() {
@@ -129,3 +131,20 @@ playy.addEventListener("click", function (e) {
     piano.classList.remove("dissapear");
     btn.classList.remove("dissapear");
 });
+
+document.getElementById("contact").addEventListener("click", function(){
+    window.open("mailto:yash114bansal@gmail.com",'_blank');
+});
+
+// function removeElementsOnSmallScreen() {
+//     if (window.innerWidth < 650) {
+//         var elementsToRemove = document.querySelectorAll('.white-note-area.noteC4, .white-note-area.noteD4, .white-note-area.noteE4, .white-note-area.noteF4, .white-note-area.noteG4, .white-note-area.noteA4, .white-note-area.noteB4');
+//         elementsToRemove.forEach(function(element) {
+//             element.remove();
+//         });
+//     }
+// }
+
+// // Call the function on page load and when the window is resized
+// window.addEventListener('load', removeElementsOnSmallScreen);
+// window.addEventListener('resize', removeElementsOnSmallScreen);

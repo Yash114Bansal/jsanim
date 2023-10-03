@@ -87,6 +87,7 @@ h1 {
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+
 .piano {
     height: 100%;
     width: 100%;
@@ -162,7 +163,6 @@ h1 {
 
     /* margin: 10px; */
 }
-
 
 
 .white-keys>.white-note-area div:hover {
