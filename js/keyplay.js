@@ -41,7 +41,13 @@ const keyboardToNoteMap = {
 
 function playNote(note) {
 
-    const keyn = new Audio(`./notes/${note}.mp3`);
+    // const keyn = new Audio(`./notes/${note}.mp3`);
+
+    const keyn = new Audio();
+    keyn.preload = "auto";
+    keyn.src = `./notes/${note}.mp3`;
+
+
     keyn.play();
 }
 
